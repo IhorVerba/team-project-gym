@@ -1,0 +1,8 @@
+{
+  "short_name": "ICA4 GYM",
+  "name": "A ICA4 GYM app",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,42 @@
+name: Front-end test
+
+on:
+  pull_request:
+    types: 
+      [opened, edited, reopened, synchronize]
+    paths:
+      - 'front-end/**'
+
+jobs:
+  Build-front-end:
+    strategy:
+      matrix:
+        node-version: [20.x]
+        os: [ubuntu-latest]
+    
+    runs-on: ${{ matrix.os }}
+  
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Restore npm cache
+        uses: actions/cache@v4
+        with:
+          path: front-end/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('front-end/**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: front-end
+
+      - name: Build React app
+        run: npm run build
+        working-directory: front-end

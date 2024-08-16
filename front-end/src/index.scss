@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../public/fonts/Helvetica/HelveticaNeueMedium.ttf')
+    format('truetype');
+}
+@font-face {
+  font-family: 'Monument';
+  src: url('../public/fonts/Monument/MonumentExtended-Regular.otf')
+    format('opentype');
+}
+
+@font-face {
+  font-family: 'e-Ukraine';
+  src: url('../public/fonts/e-Ukraine/e-Ukraine-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'e-Ukraine';
+  src: url('../public/fonts/e-Ukraine/e-Ukraine-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'e-Ukraine';
+  src: url('../public/fonts/e-Ukraine/e-Ukraine-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'e-Ukraine';
+  src: url('../public/fonts/e-Ukraine/e-Ukraine-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'e-Ukraine';
+  src: url('../public/fonts/e-Ukraine/e-Ukraine-Thin.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'e-Ukraine';
+  src: url('../public/fonts/e-Ukraine/e-Ukraine-UltraLight.otf')
+    format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('../public/fonts/RobotoMono/RobotoMono-Regular.ttf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  min-height: 100vh;
+  font-family: 'e-Ukraine', 'Helvetica', sans-serif;
+  margin: 0;
+  background-color: var(--mantine-color-background-color-0);
+  --mantine-color-body: var(--mantine-color-background-color-0);
+}

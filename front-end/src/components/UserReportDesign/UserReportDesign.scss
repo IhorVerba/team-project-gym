@@ -1,0 +1,58 @@
+.chart {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+}
+
+#charts-container {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.grid-column {
+  display: flex;
+  justify-content: center;
+}
+
+.donutChart-title {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.img {
+  margin-top: 15px;
+  position: absolute;
+  right: 30px;
+}
+
+.checkbox {
+  border: 1px solid var(--mantine-color-secondary-color-2);
+  padding: 6px 0 5px 10px;
+  border-radius: var(--mantine-radius-sm);
+  font-weight: 500;
+  transition:
+    color 100ms ease,
+    background-color 100ms ease,
+    border-color 100ms ease;
+  cursor: pointer;
+
+  input[type='checkbox'] {
+    visibility: hidden;
+  }
+
+  &[data-checked] {
+    background-image: linear-gradient(
+      to right,
+      var(--mantine-primary-color-9),
+      var(--mantine-primary-color-5)
+    );
+    border-color: var(--mantine-color-blue-filled);
+    color: var(--mantine-color-white);
+  }
+
+  & * {
+    pointer-events: none;
+    user-select: none;
+  }
+}

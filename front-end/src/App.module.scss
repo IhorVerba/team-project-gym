@@ -1,0 +1,10 @@
+@import './styles/utils.scss';
+
+.input {
+  transition: none;
+
+  &:focus-within {
+    border: 1.5px solid var(--mantine-color-primary-color-8);
+    box-shadow: var(--mantine-color-primary-color-8);
+  }
+}
